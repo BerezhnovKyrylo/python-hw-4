@@ -19,7 +19,7 @@
 from typing import List
 
 
-def two_sum(nums: List[int], target: int):
+def twosum(nums: List[int], target: int):
     for i in range(len(nums) - 1):
         for j in range(i + 1, len(nums)):
             if nums[i] + nums[j] == target:
