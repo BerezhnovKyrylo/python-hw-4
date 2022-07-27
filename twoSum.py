@@ -19,7 +19,11 @@
 from typing import List
 
 
+<<<<<<< HEAD
 def twoSum(nums: List[int], target: int):
+=======
+def twosum(nums: List[int], target: int):
+>>>>>>> 63ca7a20e39a633490b0eb9b7ac4139620fc1494
     for i in range(len(nums) - 1):
         for j in range(i + 1, len(nums)):
             if nums[i] + nums[j] == target:
