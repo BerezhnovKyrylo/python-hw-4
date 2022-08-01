@@ -11,18 +11,15 @@
 #twoSum([3, 3], 6)           # [0, 1]
 #twoSum([3, 3], 6)           # [0, 1]
 
-from typing import List
+def twoSum(num, target):
+    dicts = {}
+    for i in range(len(num)):
+        if num[i] not in dicts:
+            dicts[target - num[i]] = i
+        else:
+            return [dicts[num[i]], i]
+    return [-1, -1]
 
 
-def twoSum(nums: List[int], target: int):
-    for i in range(len(nums) - 1):
-        for j in range(i + 1, len(nums)):
-            if nums[i] + nums[j] == target:
-                print([i, j])
-                return
 
-
-twoSum([1, 2, 3], 4)
-twoSum([2, 7, 11, 15], 9)
-twoSum([3, 2, 4], 6)
-twoSum([3, 3], 6)
+print(twoSum([3, 2, 4], 6))
