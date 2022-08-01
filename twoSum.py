@@ -12,12 +12,12 @@
 #twoSum([3, 3], 6)           # [0, 1]
 
 def twoSum(num, target):
-    dicts = {}
+    dict = {}
     for i in range(len(num)):
-        if num[i] not in dicts:
-            dicts[target - num[i]] = i
+        if num[i] not in dict:
+            dict[target - num[i]] = i
         else:
-            return [dicts[num[i]], i]
+            return [dict[num[i]], i]
     return [-1, -1]
 
 
